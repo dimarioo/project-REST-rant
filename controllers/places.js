@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         pic: 'http://placekitten.com/250/250'
       }]
       
-    res.send('GET /places', {places})
+    res.send('places/index', {places})
 })
 router.post('/', (req, res) => {
     res.send('POST /places')
