@@ -1,8 +1,8 @@
 const router = require('express').Router()
 
-router.get('/', (req, res) => {
-    res.send('GET /places')
-})
+//router.get('/', (req, res) => {
+//res.send('GET /places')
+//})
 router.get('/', (req, res) => {
     let places = [{
         name: 'H-Thai-ML',
@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
         pic: 'http://placekitten.com/250/250'
       }]
       
-    res.send('places/index', {places})
+    res.render('places/index', {places})
 })
 router.post('/', (req, res) => {
     res.send('POST /places')
