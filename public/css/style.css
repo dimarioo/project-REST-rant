@@ -13,6 +13,12 @@ h1 {
     width: 1800px;
     height: 700px;
 }
+
+#showpagepic{
+ width: 500px;
+ height: 500px;
+}
+
 nav {
     background-color: cornflowerblue;
     padding: 10px;
