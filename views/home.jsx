@@ -6,7 +6,7 @@ function home () {
         <Def>
 <main>
     <h1>HOME</h1>
-    <div>
+    <div id='homepagepic'>
       <img src="/images/delicious-pizza.jpg" alt="Pizza" />
       <div>
       Photo by <a href="https://unsplash.com/ko/@briewilly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chad Montano</a> on <a href="https://unsplash.com/images/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
