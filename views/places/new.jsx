@@ -2,14 +2,17 @@ const React = require('react')
 const Def = require('../default')
 
 function new_form () {
+
     return (
         <Def>
           <main>
             <h1>Add a New Place</h1>
+            
             <form method="POST" action="/places">
             <div className="col-sm-6 col-md-4 col-lg-3">
   <label for="founded">Founded Year</label>
-  <input className="form-control" id="founded" name="founded" />
+  <input className="form-control" id="founded" name="founded" value={new Date().getFullYear}/>
+  
 </div>
 
 <div className="col-sm-6 col-md-4 col-lg-3">
