@@ -57,3 +57,16 @@ body {
     height: 500px;
     width: 500px;
 }
+#db{
+    display: m;
+   align-content: center;
+}
+#cb{
+  display: -ms-flexbox;
+}
+#edit{
+    width: 100px;
+}
+#delete{
+    width: 100px;
+}

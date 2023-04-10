@@ -2,7 +2,26 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
-  
+
+  let comments = (
+    <h3 className='inactive'>
+      No comments yet!
+    </h3>
+  )
+  if (data.place.comments.length) {
+    comments = data.place.comments.map(c => {
+      return (
+        <div className="border">
+          <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
+          <h4>{c.content}</h4>
+          <h3>
+            <stong>- {c.author}</stong>
+          </h3>
+          <h4>Rating: {c.stars}</h4>
+        </div>
+      )
+    })
+  }
     return (
         <Def>
           <main>
@@ -15,26 +34,34 @@ function show (data) {
             </h3>
             </div>
             <div className='col-sm-6'>  
+            
             <h1>Rating: Currently Unrated</h1>
-            <h1>Comments: No comments yet!</h1>
-            </div>
-            <div>
+            <h2>Comments</h2>
+            {comments}
+
             <h3>
             {data.place.showEstablished()}
             </h3>
             <h4>
             Serving {data.place.cuisines}
-            </h4>
-            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+            </h4>     
+            <a id='edit' href={`/places/${data.id}/edit`} className="btn btn-warning"> 
             Edit
-            </a>     
-            </div>
-                <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                </a> 
+                <form id='delete' method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                 <button type="submit" className="btn btn-danger">
                 Delete
                 </button>
                 </form> 
+            </div>
+            
+
+                
+            
           </div>
+
+
+    
           </main>
         </Def>
 
